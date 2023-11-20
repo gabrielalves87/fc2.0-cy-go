@@ -6,6 +6,9 @@ on:
 jobs:
   check-applications:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goVersion: [1.16, 1.17]    
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
